@@ -1,0 +1,12 @@
+name: {{cookiecutter.project_name}}
+description: {{cookiecutter.project_description}}
+author: {{cookiecutter.author}}
+author_email: {{cookiecutter.author_email}}
+license: {{cookiecutter.license}}
+copyright: {{cookiecutter.copyright}}
+modulepath: libs
+downloadpath: libs
+repo:
+    - {{cookiecutter.repo_url}}
+install_mode: {{cookiecutter.install_mode}}
+requires:
