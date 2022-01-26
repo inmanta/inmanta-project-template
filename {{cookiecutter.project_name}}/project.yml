@@ -8,8 +8,8 @@ modulepath: libs
 downloadpath: libs
 repo:
     - type: package
-      url: {{cookiecutter.repo_url}}
-    - type: git
       url: {{cookiecutter.package_repo_url}}
+    - type: git
+      url: {{cookiecutter.repo_url}}
 install_mode: {{cookiecutter.install_mode}}
 requires:
