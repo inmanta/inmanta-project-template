@@ -13,3 +13,4 @@ repo:
       url: {{cookiecutter.repo_url}}
 install_mode: {{cookiecutter.install_mode}}
 requires:
+pip: { use_config_file: False }
