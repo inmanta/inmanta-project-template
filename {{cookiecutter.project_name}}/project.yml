@@ -7,9 +7,10 @@ copyright: {{cookiecutter.copyright}}
 modulepath: libs
 downloadpath: libs
 repo:
-    - type: package
-      url: {{cookiecutter.package_repo_url}}
     - type: git
-      url: {{cookiecutter.repo_url}}
+      url: {{cookiecutter.modules_v1_repo_url}}
 install_mode: {{cookiecutter.install_mode}}
 requires:
+pip:
+    index_url:
+        - {{cookiecutter.pip_index_url}}
