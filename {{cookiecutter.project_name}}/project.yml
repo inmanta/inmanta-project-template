@@ -10,10 +10,10 @@ repo:
     - type: git
       url: {{cookiecutter.repo_url}}
     # Index url for V2 modules
-    # This is for <=ISO6
+    # This is for <=ISO6 (inmanta-core<=10)
     - type: package
       url: {{cookiecutter.package_repo_url}} 
-pip: # for >=ISO7 
+pip: # for >=ISO7 (inmanta-core>=11)
   # Index url for python package and V2 modules
   index_url: {{cookiecutter.package_repo_url}}
   # Extra index urls for python package and V2 modules
