@@ -7,9 +7,21 @@ copyright: {{cookiecutter.copyright}}
 modulepath: libs
 downloadpath: libs
 repo:
-    - type: package
-      url: {{cookiecutter.package_repo_url}}
     - type: git
       url: {{cookiecutter.repo_url}}
+    # Index url for V2 modules
+    # This is for <=ISO6
+    - type: package
+      url: {{cookiecutter.package_repo_url}} 
+pip: # for >=ISO7 
+  # Index url for python package and V2 modules
+  index_url: {{cookiecutter.package_repo_url}}
+  # Extra index urls for python package and V2 modules
+  extra_index_url: []
+  # Allow pip to install prerelease versions or not?
+  pre: {{cookiecutter.install_mode != "release"}}
+  # Use the pip system config or not?
+  # May have security implications
+  use_system_config: false
 install_mode: {{cookiecutter.install_mode}}
 requires:
