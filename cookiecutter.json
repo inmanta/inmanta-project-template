@@ -7,9 +7,5 @@
     "copyright": "{% now 'local', '%Y' %} Inmanta",
     "repo_url": "https://github.com/inmanta/",
     "package_repo_url": "https://pypi.org/simple/",
-    "install_mode": [
-        "release",
-        "master",
-        "prerelease"
-    ]
-}
+    "install_mode": ["release", "master", "prerelease"]
+  }

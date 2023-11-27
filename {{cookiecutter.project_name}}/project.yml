@@ -25,6 +25,3 @@ pip: # for >=ISO7 (inmanta-core>=11)
   use_system_config: false
 install_mode: {{cookiecutter.install_mode}}
 requires:
-pip:
-    index_urls:
-        - {{cookiecutter.package_repo_url}}
