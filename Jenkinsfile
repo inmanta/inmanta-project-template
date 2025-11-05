@@ -16,15 +16,16 @@ pipeline {
                 }
                 dir('project') {
                     sh '''
-                        python3 -m venv ${WORKSPACE}/env
-                        ${WORKSPACE}/env/bin/pip install -U pip cookiecutter
-                        ${WORKSPACE}/env/bin/cookiecutter --no-input ../inmanta-project-template/
+                        uv tool run cookiecutter --no-input ../inmanta-project-template/
                     '''
                 }
                 dir('project/project') {
                     sh '''
-                        # follow README instructions exactly
-                        python3 -m venv .env && source .env/bin/activate
+                        python_version=$(curl https://docs.inmanta.com/community/latest/reference/compatibility.json | jq -r '.system_requirements.python_version')
+                        uv venv --python "$python_version"
+                        uv pip install pip
+                        source .venv/bin/activate
+                        # follow README instructions exactly, except for Python version
                         pip install inmanta-core
                         inmanta -vvv project install
                         inmanta -vvv compile
